@@ -1,0 +1,14 @@
+footer {
+  height:128px;
+  background-color:$blue-dark;
+  padding:40px 0;
+  color:$blue-light;
+  img { float:left; margin-right:15px; }
+  a { font-family:$bold; color:$blue-light; }
+  a:hover { color:$white; }
+  p {
+      font-family:$regular;
+      font-size:12px;
+      line-height:16px;
+    }
+}

@@ -1,0 +1,71 @@
+// JOIN PAGE CONTENT
+
+#pageTitle {
+  height:285px;
+  background-color:$white;
+  padding-top:135px;
+  h1 { font-family:$bold; color:$orange; font-size:100px; margin:0; }
+}
+#pinterest {
+  background-image:url(../img/crossword.png);
+}
+#pinterest h2 {
+  font-family:$bold;
+  color:scale-color($grey, $lightness: 45%);
+}
+#pinterest .small-12 {
+  padding-top:35px;
+  padding-bottom:15px;
+}
+.card-content {
+  height:auto;
+  border-radius:0 0 4px 4px;
+  background-color:$white;
+  box-shadow:0 10px 10px -5px rgba(0,0,0,0.08);
+  padding:20px;
+}
+.card-title {
+  height:50px;
+  border-radius:4px 4px 0 0;
+  background-color:$orange;
+  padding:8px 10px;
+  h5 {
+    font-family:$medium;
+    color:$white;
+  }
+}
+.description {
+  height:auto;
+  border-bottom:1px solid #ebebeb;
+  margin-bottom:20px; // pushes user-photo + ul in place vertically
+  p {
+    font-family:$regular;
+    font-size:14px;
+    color:$grey;
+  }
+}
+.user-photo {
+  width:65px;
+  height:65px;
+  border-radius:50%;
+  background-color:$grey-light;
+  margin-right:18px; // pushes ul in place horizontally
+  float:left;
+}
+.meeting-details {
+  list-style:none;
+  font-family:$bold;
+  font-size:14px;
+  color:$blue;
+}
+.card-buttons {
+  height:80px;
+  padding:30px 0;
+  .button {
+    width:49%;
+    background-color:$blue;
+  }
+  .button:hover {
+    background-color:scale-color($blue, $lightness:8%);
+  }
+}
