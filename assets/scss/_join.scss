@@ -1,17 +1,27 @@
 // JOIN PAGE CONTENT
-
 #pageTitle {
   height:285px;
   background-color:$white;
   padding-top:135px;
   h1 { font-family:$bold; color:$orange; font-size:100px; margin:0; }
 }
+#language, #searchBar {
+  margin-top:70px;
+  border-radius:4px;
+  //padding in between styled inline in html line 73 & 80
+}
+
+// BEGIN PINTEREST CARDS STYLING
 #pinterest {
   background-image:url(../img/crossword.png);
 }
-#pinterest h2 {
+// Heading for each group of cards
+.sub-title h2 {
   font-family:$bold;
-  color:scale-color($grey, $lightness: 45%);
+  color:scale-color($grey, $lightness: 28%);
+}
+.sub-title:not(:first-child) { // affect everything but first instance!
+  margin-bottom:-20px;
 }
 #pinterest .small-12 {
   padding-top:35px;

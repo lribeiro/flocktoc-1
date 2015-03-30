@@ -110,7 +110,7 @@ section {
   .cards > li { width:310px; display:inline-block; margin-right:10px; position:relative; }
   .card-content { height:300px; }
   .description { p { line-height:20px; color:$grey; }}
-  .card-buttons {  padding:18px 0; a:hover { top:0; }}
+  .card-buttons { padding:18px 0; a:hover { top:0; }}
 }
 // learn has a specific padding since it is more content heavy than its peers.
 #learn { padding:50px; }

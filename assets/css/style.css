@@ -215,12 +215,19 @@ section {
     font-size: 100px;
     margin: 0; }
 
+#language, #searchBar {
+  margin-top: 70px;
+  border-radius: 4px; }
+
 #pinterest {
   background-image: url(../img/crossword.png); }
 
-#pinterest h2 {
+.sub-title h2 {
   font-family: "robotobold";
-  color: #cacaca; }
+  color: #bababa; }
+
+.sub-title:not(:first-child) {
+  margin-bottom: -20px; }
 
 #pinterest .small-12 {
   padding-top: 35px;
