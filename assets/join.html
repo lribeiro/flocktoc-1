@@ -62,31 +62,38 @@
     </div>
 
 
-    <!-- ##########  CONTENT SECTIONS  ########## -->
+    <!-- ##########  PAGE TITLE, SEARCH BAR, ETC.  ########## -->
     <div id="pageTitle">
       <div class="row">
-        <div class="small-7 small-text-left columns">
+        <div class="small-12 large-6 small-text-left columns">
           <h1>Join</h1>
         </div>
 
-        <div class="small-5 columns">
-          <div style="padding-left:0; padding-right:0;" class="small-3 columns">
-            <select id="language">
+        <div id="pageOptions" class="small-12 large-6 columns">
+          <div class="small-4 columns" style="padding-left:0; padding-right:10px;">
+            <select> <!-- church -->
+              <option value="collegedale">Collegedale SDA Church</option>
+              <option value="collegedale">Collegedale SDA Church</option>
+              <option value="collegedale">Collegedale SDA Church</option>
+            </select>
+          </div>
+          <div class="small-2 columns" style="padding-left:0; padding-right:10px;">
+            <select> <!-- language-->
               <option value="english">English</option>
               <option value="spanish">Spanish</option>
               <option value="portuguese">Portuguese</option>
             </select>
           </div>
-          <div style="padding-left:10px; padding-right:0;" class="small-9 columns">
-            <form>
-              <input id="searchBar" type="search" placeholder="Search Flocktoc" autocomplete="off">
+          <div class="small-6 columns" style="padding-left:0px; padding-right:0;">
+            <form> <!-- search -->
+              <input type="search" placeholder="Search Flocktoc" autocomplete="off">
             </form>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- GROUP OF CARDS -->
+    <!-- ##########  GROUP OF TOPIC CARDS  ########## -->
     <div id="pinterest">
       <div class="sub-title">
         <div class="row">
@@ -97,7 +104,7 @@
       </div>
       <div class="row">
         <div class="small-12 columns"> <!-- adds margins on outer edges -->
-          <ul class="cards small-block-grid-1"><!-- begin class cards -->
+          <ul class="cards small-block-grid-1"> <!-- begin class cards -->
             <li>
               <div class="card-title"><h5>Hall of Faith Series #2<h5></div>
               <div class="card-content">
@@ -114,7 +121,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -135,7 +142,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -157,7 +164,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -179,7 +186,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -201,7 +208,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -210,7 +217,7 @@
         </div>
       </div>
 
-      <!-- GROUP OF CARDS -->
+      <!-- ##########  GROUP OF TOPIC CARDS  ########## -->
       <div class="sub-title">
         <div class="row">
           <div class="small-12 columns">
@@ -237,7 +244,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -258,7 +265,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -280,7 +287,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -302,7 +309,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -324,7 +331,7 @@
                     <li>EST/EDT</li>
                 </ul>
                 <div class="card-buttons">
-                  <a href="#" class="small radius button">Watch</a>
+                  <a href="#" class="disabled small radius button">Watch</a>
                   <a href="#" class="small radius button">Join</a>
                 </div>
               </div>
@@ -369,6 +376,11 @@
     <script>
       $(document).foundation();
       $('.navMobile-link').bigSlide();
+
+      // prevent access to disabled buttons underlying link address
+      $('.disabled').click(function(e){
+        return false;
+      });
 
       // use modernizr to swap svg with jpgs if unsupported browser
       // if you don't want to use modernizr, JS alternative: https://css-tricks.com/using-svg/

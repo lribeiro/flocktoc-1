@@ -118,6 +118,15 @@ section {
   #watch p, #lead p {
     color: #6f6f6f; }
 
+#join, #learn {
+  background-color: #0071bc; }
+  #join h1, #join p, #learn h1, #learn p {
+    color: #fff; }
+
+#learn {
+  padding: 50px; }
+
+/* IPAD AND MOCK-CARDS */
 #ipad {
   float: right;
   width: 325px;
@@ -157,7 +166,6 @@ section {
   /* Chrome, Safari, Opera */
   animation-duration: 3s; }
 
-/* Chrome, Safari, Opera */
 @-webkit-keyframes example {
   from {
     width: 0%; }
@@ -165,7 +173,6 @@ section {
   to {
     width: 70%; } }
 
-/* Standard Syntax */
 @keyframes left-right {
   from {
     width: 0%; }
@@ -173,11 +180,7 @@ section {
   to {
     width: 70%; } }
 
-#join, #learn {
-  background-color: #0071bc; }
-  #join h1, #join p, #learn h1, #learn p {
-    color: #fff; }
-
+/* JOIN FEATURED CARDS */
 #featured {
   width: 320px;
   margin-top: -48px;
@@ -201,9 +204,6 @@ section {
     #featured .card-buttons a:hover {
       top: 0; }
 
-#learn {
-  padding: 50px; }
-
 /* JOIN PAGE CONTENT */
 #pageTitle {
   height: 285px;
@@ -215,23 +215,29 @@ section {
     font-size: 100px;
     margin: 0; }
 
-#language, #searchBar {
-  margin-top: 70px;
-  border-radius: 4px; }
+#pageOptions {
+  margin-top: 76px; }
+  #pageOptions select, #pageOptions input {
+    border-radius: 4px;
+    font-size: 12px;
+    height: 32px;
+    background-color: #fff;
+    color: #a2a2a2; }
 
+/* BEGIN PINTEREST CARDS STYLING */
 #pinterest {
   background-image: url(../img/crossword.png); }
 
+.sub-title {
+  padding-bottom: 15px; }
+  .sub-title:nth-child(1) {
+    padding-top: 45px; }
+  .sub-title:not(:first-child) {
+    padding-top: 30px; }
+
 .sub-title h2 {
   font-family: "robotobold";
-  color: #bababa; }
-
-.sub-title:not(:first-child) {
-  margin-bottom: -20px; }
-
-#pinterest .small-12 {
-  padding-top: 35px;
-  padding-bottom: 15px; }
+  color: #c3c3c3; }
 
 .card-content {
   height: auto;
@@ -270,7 +276,7 @@ section {
   list-style: none;
   font-family: "robotobold";
   font-size: 14px;
-  color: #0071bc; }
+  color: #737373; }
 
 .card-buttons {
   height: 80px;
@@ -280,6 +286,8 @@ section {
     background-color: #0071bc; }
   .card-buttons .button:hover {
     background-color: #0080d6; }
+  .card-buttons .disabled, .card-buttons .disabled:hover {
+    background-color: #d8d8d8; }
 
 /* FOOTER */
 footer {
@@ -321,7 +329,11 @@ footer {
     display: none; }
   #banner {
     background-image: url(../img/banner-image.jpg);
-    background-repeat: no-repeat; } }
+    background-repeat: no-repeat; }
+  #pageTitle {
+    height: 340px; }
+  #pageOptions {
+    margin-top: 0; } }
 
 @media screen and (min-width: 1366px) {
   video {

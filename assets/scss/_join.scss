@@ -5,27 +5,29 @@
   padding-top:135px;
   h1 { font-family:$bold; color:$orange; font-size:100px; margin:0; }
 }
-#language, #searchBar {
-  margin-top:70px;
-  border-radius:4px;
-  //padding in between styled inline in html line 73 & 80
+#pageOptions {
+  margin-top:76px;
+  select, input {
+    border-radius:4px;
+    font-size:12px;
+    height:32px;
+    background-color:$white;
+    color:scale-color($grey, $lightness: 3%);
+  }
+  //padding in between forms is styled inline in html line 73 & 80
 }
 
-// BEGIN PINTEREST CARDS STYLING
-#pinterest {
-  background-image:url(../img/crossword.png);
+/* BEGIN PINTEREST CARDS STYLING */
+#pinterest { background-image:url(../img/crossword.png); }
+// 15px difference
+.sub-title {
+  &:nth-child(1) { padding-top:45px; }
+  &:not(:first-child) { padding-top:30px; }
+  padding-bottom:15px;
 }
-// Heading for each group of cards
 .sub-title h2 {
   font-family:$bold;
-  color:scale-color($grey, $lightness: 28%);
-}
-.sub-title:not(:first-child) { // affect everything but first instance!
-  margin-bottom:-20px;
-}
-#pinterest .small-12 {
-  padding-top:35px;
-  padding-bottom:15px;
+  color:scale-color($grey, $lightness: 38%);
 }
 .card-content {
   height:auto;
@@ -66,7 +68,7 @@
   list-style:none;
   font-family:$bold;
   font-size:14px;
-  color:$blue;
+  color:scale-color($black, $lightness: 3%);
 }
 .card-buttons {
   height:80px;
@@ -76,6 +78,11 @@
     background-color:$blue;
   }
   .button:hover {
-    background-color:scale-color($blue, $lightness:8%);
+    background-color:scale-color($blue, $lightness: 8%);
+  }
+  .disabled, .disabled:hover {
+    background-color:scale-color($grey-light, $lightness: -12%);
   }
 }
+
+// Media query for this page is on style.scss

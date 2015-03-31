@@ -48,7 +48,15 @@ section {
   h1 { color:$orange; }
   p { color: $black; }
 }
-// iPad and Mock-Content
+#join, #learn {
+  background-color:$blue;
+  h1, p { color: $white; }
+}
+// learn has a specific padding since it is more content heavy than its peers.
+#learn { padding:50px; }
+
+
+/* IPAD AND MOCK-CARDS */
 #ipad {
   float:right;
   width:325px;
@@ -87,21 +95,19 @@ section {
   -webkit-animation-duration:3s; /* Chrome, Safari, Opera */
   animation-duration:3s;
 }
-/* Chrome, Safari, Opera */
+// Chrome, Safari, Opera
 @-webkit-keyframes example {
   from { width:0%; }
   to { width:70%; }
 }
-/* Standard Syntax */
+// Standard Syntax
 @keyframes left-right {
   from { width:0%; }
   to { width:70%; }
 }
-#join, #learn {
-  background-color:$blue;
-  h1, p { color: $white; }
-}
-// Join Featured Cards
+
+
+/* JOIN FEATURED CARDS */
 #featured {
   width:320px;
   margin-top:-48px;
@@ -112,8 +118,6 @@ section {
   .description { p { line-height:20px; color:$grey; }}
   .card-buttons { padding:18px 0; a:hover { top:0; }}
 }
-// learn has a specific padding since it is more content heavy than its peers.
-#learn { padding:50px; }
 
 
 /* JOIN PAGE CONTENT */
@@ -125,7 +129,7 @@ section {
 
 
 /* MEDIA QUERIES */
-@media screen and (max-width:530px) {
+@media screen and (max-width:530px) { // below 530px
   section {
     h1 { font-size:75px; margin:0 0 15px 0; }
     p { font-size:19px; line-height:26px; }
@@ -139,6 +143,10 @@ section {
 @media screen and (max-width:1024px) { // below 1024px
   video { display:none; }
   #banner { background-image:url(../img/banner-image.jpg); background-repeat:no-repeat; }
+
+  // Join page items
+  #pageTitle { height:340px; }
+  #pageOptions { margin-top:0; }
 }
 @media screen and (min-width:1366px) { // above 1366px
   video { top:-160px; }
