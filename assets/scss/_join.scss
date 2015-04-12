@@ -18,61 +18,67 @@
 }
 
 /* BEGIN PINTEREST CARDS STYLING */
-#pinterest { background-image:url(../img/crossword.png); }
-// 15px difference
-.sub-title {
-  &:nth-child(1) { padding-top:45px; }
-  &:not(:first-child) { padding-top:30px; }
-  padding-bottom:15px;
-}
-.sub-title h2 {
-  font-family:$bold;
-  color:scale-color($grey, $lightness: 25%);
-}
+#pinterest { background-image:url(../img/crossword.png); padding-top:50px; }
+
 .card-content {
-  height:auto;
+  height:420px; // give card fixed height to prevent card changing based on content
   border-radius:0 0 4px 4px;
   background-color:$white;
   box-shadow:0 10px 10px -5px rgba(0,0,0,0.08);
   padding:20px;
 }
-.card-title {
+.card-catagory {
   height:50px;
   border-radius:4px 4px 0 0;
   background-color:$orange;
   padding:8px 10px;
-  h5 {
+  h2 {
     font-family:$medium;
+    font-size:18px;
     color:$white;
   }
 }
-.description {
-  height:auto;
-  border-bottom:1px solid #ebebeb;
-  margin-bottom:20px; // pushes user-photo + ul in place vertically
+.user-photo {
+  width:75px;
+  height:75px;
+  border-radius:50%;
+  background-color:$grey-light;
+  margin-right:18px; // pushes ul in place horizontally
+  float:left;
+}
+.user-bio {
+  height:65px;
+  list-style:none;
+  font-size:13px;
+  font-family:$regular;
+  line-height:20px;
+  color:$grey;
+}
+.user-name {
+  font-family:$bold;
+  font-size:14px;
+  padding-bottom:5px;
+  color:scale-color($black, $lightness: 40%);
+}
+.event {
+  height:225px;
+  border-top:1px solid #ebebeb;
+  margin-top:45px;
+  padding-top:22px;
+
+  h3 {
+    font-family:$bold;
+    font-size:16px;
+    margin:0;
+    color:scale-color($black, $lightness: 12%);
+  }
   p {
     font-family:$regular;
     font-size:14px;
     color:$grey;
   }
 }
-.user-photo {
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  background-color:$grey-light;
-  margin-right:18px; // pushes ul in place horizontally
-  float:left;
-}
-.meeting-details {
-  list-style:none;
-  font-family:$bold;
-  font-size:14px;
-  color:scale-color($black, $lightness: 3%);
-}
 .card-buttons {
-  height:80px;
-  padding:30px 0;
   .button {
     width:49%;
     background-color:$blue;
