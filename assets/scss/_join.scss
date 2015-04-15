@@ -36,9 +36,13 @@
   background-color:$grey-light;
   margin-right:18px; // pushes ul in place horizontally
   float:left;
+  &:hover {
+    opacity:0.8;
+    cursor:pointer;
+  }
 }
 .user-name {
-  height:72px;
+  height:75px;
   padding:26px 0 5px 100px;
   font-family:$bold;
   font-size:14px;
@@ -46,7 +50,7 @@
 }
 .user-bio {
   height:250px;
-  display:none;
+  padding:20px 8px 0 8px;
   p {
     font-family:$regular;
     font-size:13px;
@@ -58,6 +62,7 @@
   border-top:1px solid #ebebeb;
   margin-top:25px;
   padding-top:22px;
+
   ul { list-style:none; margin:0; }
   li {
     font-family:$regular;
@@ -89,5 +94,10 @@
     background-color:scale-color($grey-light, $lightness: -12%);
   }
 }
-
+.event, .card-buttons {
+  z-index:10;
+  position:relative;
+  top:-250px; // manipulated in customcards.js
+  background-color:#fff;
+}
 // Media query for this page is on style.scss

@@ -21,3 +21,15 @@ $(window).resize(function() {
     $(".cards").removeClass().addClass("cards small-block-grid-1");
   }
 });
+
+// Reveal user bios on hover
+$(".user-photo").hover(
+  function() {
+    $(this).siblings('.event').animate({ top:"0px" }, 700);
+    $(this).siblings('.card-buttons').animate({ top:"0px" }, 700);
+  },
+  function() {
+    $(this).siblings('.event').animate({ top:"-250px" }, 700);
+    $(this).siblings('.card-buttons').animate({ top:"-250px" }, 700);
+  }
+);
