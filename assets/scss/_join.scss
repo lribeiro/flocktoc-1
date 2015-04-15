@@ -36,10 +36,6 @@
   background-color:$grey-light;
   margin-right:18px; // pushes ul in place horizontally
   float:left;
-  &:hover {
-    opacity:0.8;
-    cursor:pointer;
-  }
 }
 .user-name {
   height:75px;
@@ -47,6 +43,15 @@
   font-family:$bold;
   font-size:14px;
   color:scale-color($black, $lightness: 40%);
+}
+// Styles info icons
+.user-name img {
+  position:relative;
+  top:-8px;
+  opacity:0.5;
+  &:hover {
+    cursor:pointer;
+  }
 }
 .user-bio {
   height:250px;

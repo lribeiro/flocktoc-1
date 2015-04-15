@@ -22,14 +22,15 @@ $(window).resize(function() {
   }
 });
 
-// Reveal user bios on hover
-$(".user-photo").hover(
-  function() {
-    $(this).siblings('.event').animate({ top:"0px" }, 700);
-    $(this).siblings('.card-buttons').animate({ top:"0px" }, 700);
-  },
-  function() {
-    $(this).siblings('.event').animate({ top:"-250px" }, 700);
-    $(this).siblings('.card-buttons').animate({ top:"-250px" }, 700);
+// On info icon click, reveal .user-bio
+$(".user-name img").click(function(){
+  if ($(this).hasClass("active")) {
+    $(this).parent().siblings(".event").animate({ top:"-250px" }, 700);
+    $(this).parent().siblings('.card-buttons').animate({ top:"-250px" }, 700);
+    $(this).removeClass("active");
+  } else {
+    $(this).parent().siblings(".event").animate({ top:"0px" }, 700);
+    $(this).parent().siblings('.card-buttons').animate({ top:"0px" }, 700);
+    $(this).addClass("active");
   }
-);
+});
